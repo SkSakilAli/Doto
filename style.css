@@ -1,0 +1,172 @@
+*{
+    margin: ;
+    font-family: sans-serif;
+}
+
+body{
+
+    background-color: #D9D9D9;
+}
+
+#main{
+        width: 80%;
+        margin: 5px auto;
+        position: relative;
+}
+
+header{
+        width: 100%;
+        margin: 5px auto;
+        border: 1px solid #B1A8A8;
+        border-radius:25px;
+        padding: 10px 0%;
+        text-align: center;
+ }
+
+ #clock{
+     margin-top: 20px;
+     width: 90%;
+     padding:20% 0;
+     text-align: center;
+     display: inline-block;
+
+ }
+
+ .timer{
+       font-weight: bold;
+       font-size: 3vw;
+       color: #444444;
+
+     
+ } 
+.box{
+    background-color: #DBEBE0;
+
+ }
+
+ #second{
+     display: inline-block;
+     width: 30%;
+     float: left;
+ }
+
+ #promodo{
+     margin-top: 20px;
+     width: 90%;
+     padding:20% 0;
+     text-align: center;
+     display: inline-block;
+     position: relative;
+ }
+
+ #promodoButtons{
+     position: absolute;
+     bottom: 1vw;
+     margin: 0;
+     width: 100%;
+ }
+
+ .buttonGreen{
+     background-color: #9CDF6F;
+     border: 0.5px solid #E4F6DE;
+     width: 40%;
+     padding: 0.3vw 0;
+     border-radius: 25px;
+     margin: 10px;
+     position: relative;
+     font-size:0.8vw;
+
+}
+.btnimgp{
+     width: 0.5vw;
+     position: absolute;
+     left: 0.7vw;
+     top: 30%;
+}
+
+ .buttonRed{
+     background-color: #FF5F5F;
+     border: 0.5px solid #EAAEAE;
+     width: 40%;
+     padding: 0.3vw 0;
+     border-radius: 25px;
+     font-size:0.8vw;
+     position: relative;
+ }
+ #first{
+     width: 65%;
+     position: absolute;
+     right: 0px;
+ }
+ #todoHeader{
+     position: absolute;
+     padding-bottom: 5vw;
+ }
+ #todoHeaderHead{
+     padding-top: 1vw;
+     padding-left: 1vw;
+     font-size: 1.7vw;
+     margin-bottom: 0px;
+ }
+
+ #tpHeaderSub{
+                margin-top:0;
+                padding-left: 1vw;
+ }
+
+ #todoHeaderText{
+     padding-bottom: 1vw;
+ }
+
+ .secondaryText{
+     font-size: 1vw;
+     color: #695B5B;
+ }
+ #toButtons{
+     position: absolute;
+     top: 2vw;
+     right:-1vw;
+     width: 50%;
+ }
+ .Task{
+          background-color: #DBEBE0;
+          width: 100%;
+          margin: 2vw 0;
+          height: 7vw;
+          display: inline-block;
+          border-radius: 25px;
+ }
+ .TaskNumber{
+     background-color: #D9D9D9;
+     border: 1px solid #D9D9D9;
+     width: ;
+     padding: 0.5vw 0.8vw;
+     border-radius: 50%;
+     display: inline-block;
+     margin: 1vw;
+     text-align: center;
+     font-size: 0.8vw;
+     position: relative;
+ }
+
+ .Task button{
+   width: 25%; 
+ }
+
+ .buttonGrey{
+      background-color: #D9D9D9;
+     border: 0.5px solid #EEE6E6;
+     width: 40%;
+     padding: 0.3vw 0;
+     border-radius: 25px;
+     margin: 10px;
+     position: relative;
+     font-size:0.8vw;
+
+
+ }
+
+ button:hoveri{
+               
+               background-color: #D9D9D9;
+ }

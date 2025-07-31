@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title> Doto </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta name="description" content="A to do list web app so you don't forget the most important" />
+        <meta name="author" content="Sk Sakil Ali" />
+        <meta name="charset" content="UTF-32" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <head>
+    <body>
+    <div id="main">
+      <header class="box">
+          <p id="heading" class="textTwo">Hey what's your <a id="username" href="">name</a></p>
+     </header>
+     <!-- Second Starting -->
+     <div id="second">
+     <div>
+         <div id="clock" class="box">
+             <span id="time" class="timer">12:00 PM</span>
+        </div>
+     </div>
+        <div id="promodo" class="box">
+            <span id="stopWatch" class="timer">0:00</span>
+            <div id="promodoButtons">
+                <button id="promodoStart" class="buttonGreen"><img id="startbtimg" class="btnimgp" src="assets/startButton.svg" />Start Promodo</button>
+                <button id="promodoStop" class="buttonRed"><img id="stopbtimg" class="btnimgp" src="assets/stopButton.svg" />Stop Promodo</button>
+            </div>
+        </div>
+     </div>
+
+    <!-- To do List main program Starts -->
+     <div id="first">
+         <div id=todoHeader" class="box">
+             <div id="todoHeaderText">
+             <h2 id="todoHeaderHead">Wednesday 30/7/25</h2>
+             <p id="tpHeaderSub" class="secondaryText"> 50% Completion</p>
+             </div>
+             <div id="toButtons">
+             <button id="startTodo" class="buttonGreen"><img class="btnimgp" src="assets/addTask.svg">Add Task</button>
+
+             <button id="startTodo" class="buttonRed"><img class="btnimgp" src="assets/resetTask.svg">Reset</button>
+            </div>
+             </div>
+
+         <div id="Task1" class="Task">
+         <div id="TaskNumber1" class="TaskNumber"><span>1</span></div>
+         <span id="TaskText1" class=".secondaryText" contenteditable="true"> Add you Task Here </span>
+         <div id="buttonsFirst" class="buttonFirst">
+             <button id="markAsComplete" class="buttonGreen"><img class="btnimgp" src="assets/complete.svg"><span>Mark as Complete</span></button>            
+<button id="deleteButton" class="buttonRed"><img class="btnimgp" src="assets/delete.svg"><span>Delete the Task</span></button>            
+
+<button id="promodoButton" class="buttonGrey"><img class="btnimgp" src="assets/promodo.svg"><span>Add a Promodo</span></button>
+         </div>
+         </div>
+     </div>
+
+    </div>
+    </body>
+</html>
+
