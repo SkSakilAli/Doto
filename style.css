@@ -135,6 +135,7 @@ header{
           height: 7vw;
           display: inline-block;
           border-radius: 25px;
+          margin-bottom: 0px;
  }
  .TaskNumber{
      background-color: #D9D9D9;
