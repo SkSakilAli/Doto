@@ -13,6 +13,7 @@ tasks[numberOfTask] = copy.cloneNode(true);
 child.appendChild(tasks[numberOfTask]);
 tasks[numberOfTask].setAttribute("Id", numberOfTask);
 tasks[numberOfTask].querySelectorAll(".buttonGreen")[0].setAttribute("ID","btg"+numberOfTask);
+tasks[numberOfTask].querySelectorAll(".buttonRed")[0].setAttribute("ID", "btr"+numberOfTask);
 taskNew = document.getElementById(numberOfTask);
 taskNumberNew = taskNew.querySelectorAll(".TaskNumber")[0];
 taskNumberNew.textContent = numberOfTask + 1;
@@ -27,7 +28,9 @@ reset: ()=>{
     child.removeChild(document.getElementById(i));
     document.querySelectorAll(".Task .secondaryText")[0].textContent = "Add your Task Here"
     if(i==1){ numberOfTask = 1; }
-
+    numberOfTask = 1;
+    CompletedTask = 0;
+    document.getElementById("tpHeaderSub").textContent = "0% Task Completed"
 }
 },
     markComplete: (event)=>{
@@ -58,11 +61,35 @@ CompletedTask += 1;
         }
 document.getElementById("tpHeaderSub").textContent = (CompletedTask/numberOfTask)*100 + "%  Task Completed "
 
+
+    },
+deleteTask: (event)=>{
+     let id = event.target.offsetParent.id;
+    if(id =="first"){
+        id = event.target.id;
     }
+    let divId= id[id.length-1];
+    let element = document.getElementById(divId);
+    console.log(id);
+    console.log(divId);
+    console.log(element);
+    if(divId==="0"){
+      document.getElementById("first").removeChild(element);
+
+    }
+    else{
+         child.removeChild(element);
+    }
+    for(let i= Number(divId)+1; i<numberOfTask; i++){
+        document.getElementById(i).querySelectorAll(".TaskNumber")[0].textContent = i;
+    }
+    numberOfTask--;
+}
 
 }
 tasks.addbtn.addEventListener("click", tasks.add);
 tasks.resetButton.addEventListener("click", tasks.reset);
+
 
 document.getElementById("todoHeaderHead").textContent= new Date().toDateString();
 
