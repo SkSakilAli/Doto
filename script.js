@@ -1,5 +1,10 @@
 const child = document.getElementById("child");
 const copy = document.querySelectorAll(".Task")[0].cloneNode(true);
+let date;
+let time;
+let systemTime;
+let systemTime2;
+let year;
 let numberOfTask = 1;
 let taskNew;
 let taskNumberNew;
@@ -21,6 +26,7 @@ numberOfTask++;
 
 
    },
+
 //Adding Reset
     resetButton: document.getElementById("resetTask"),
 reset: ()=>{
@@ -30,8 +36,9 @@ reset: ()=>{
     if(i==1){ numberOfTask = 1; }
     numberOfTask = 1;
     CompletedTask = 0;
-    document.getElementById("tpHeaderSub").textContent = "0% Task Completed"
+    document.getElementById("tpHeaderSub").textContent = "0% Task Completed";
 }
+
 },
     markComplete: (event)=>{
         let id = event.target.offsetParent.id;
@@ -92,4 +99,42 @@ tasks.resetButton.addEventListener("click", tasks.reset);
 
 
 document.getElementById("todoHeaderHead").textContent= new Date().toDateString();
+//Basically I need to set setInterval deine a function for get date, extrating time from it and set it to time element
+setInterval(
+    ()=>{
+        date = new Date();
+        date = date.toString();
+        date = date.split(" ");
+        systemTime = date[4];
+        systemTime2 = systemTime.split(":");
+        systemTime2 = systemTime2[0]+":"+ systemTime2[1]
+        document. getElementById("time").textContent = systemTime2;
+    }, 1000
+);
+
+
+async function promodo(){
+   // time = systemTime.toString.split(":");
+     time= systemTime.toString().split(":");
+    promodoTimer =setInterval(
+        ()=>{
+      systemTime = systemTime.split(":");
+            document.getElementById("stopWatch").textContent = (systemTime[0]-time[0]) +":"+(systemTime[1]-time[1])+":"+(systemTime[2]-time[2]);
+        }, 1000
+    )
+    document.getElementById("promodoStop").addEventListener("click", ()=>{
+        document.getElementById("promodoStop").textContent = "Reset Promodo";
+         clearInterval(promodoTimer);
+   document.getElementById("promodoStop").addEventListener("click", ()=>
+       {
+           document.getElementById("stopWatch").textContent = "0:0:00";
+           document.getElementById("promodoStop").textContent = "Stop Promodo";
+       });
+        document.getElementById("promodoStart").addEventListener("click",()=>
+            {
+                promodo();
+            })
+    })
+}
+
 

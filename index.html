@@ -17,18 +17,18 @@
     <div id="main">
       <header class="box">
           <p id="heading" class="textTwo">Ready to <b>Grind</b> Today?</p>
-     </header>
-     <!-- Second Starting -->
+      </header>
+          <!-- Second Starting -->
      <div id="second">
      <div>
          <div id="clock" class="box">
-             <span id="time" class="timer">12:00 PM</span>
+             <span id="time" class="timer">Fetching Time</span>
         </div>
      </div>
         <div id="promodo" class="box">
             <span id="stopWatch" class="timer">0:00</span>
             <div id="promodoButtons">
-                <button id="promodoStart" class="buttonGreen"><img id="startbtimg" class="btnimgp" src="assets/startButton.svg" />Start Promodo</button>
+                <button id="promodoStart" class="buttonGreen" onclick="promodo()"><img id="startbtimg" class="btnimgp" src="assets/startButton.svg">Start Promodo</button>
                 <button id="promodoStop" class="buttonRed"><img id="stopbtimg" class="btnimgp" src="assets/stopButton.svg" />Stop Promodo</button>
             </div>
         </div>
@@ -56,7 +56,7 @@
              <button class="buttonGreen" name="markComplete" id="btg0" onclick="tasks.markComplete(event)"><img class="btnimgp" src="assets/complete.svg"><span>Mark as Complete</span></button>            
 <button class="buttonRed" onclick="tasks.deleteTask(event)" id="btr0"><img class="btnimgp" src="assets/delete.svg" name="deletTask"><span>Delete the Task</span></button>            
 
-<button class="buttonGrey" onclick="" id="btp0"><img class="btnimgp" src="assets/promodo.svg"><span>Add a Promodo</span></button>
+<button class="buttonGrey" onclick="promodo()" id="btp0"><img class="btnimgp" src="assets/promodo.svg"><span>Add a Promodo</span></button>
          </div>
          </div>
          <div id="child"> </div>
